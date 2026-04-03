@@ -11,7 +11,7 @@ const nextConfig = {
       {
         protocol: "https",
         hostname: "res.cloudinary.com",
-        pathname: "/domw8nvul/**", // scope it to your account
+        pathname: "/dhd14rzqf/**", // scope it to your account
       },
     ],
   },
