@@ -3,9 +3,9 @@ import "../globals.css";
 import ClientLayout from "@/components/ClientLayout";
 
 export const metadata: Metadata = {
-  title: "Shopici",
+  title: "Bossman Gadgets & Acessories",
   description:
-    "Shopici est votre boutique en ligne pour des produits tendance et des essentiels du quotidien. Produits de qualité, prix malins et livraison dans tout le Cameroun",
+    "Bossman Gadgets & Accessories – Cameroon provides top-tier computers, gaming gear, and tech services, including internet setup and electrical installations. Quality products and expert solutions for homes and businesses across Cameroon.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
