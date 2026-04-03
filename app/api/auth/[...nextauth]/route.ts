@@ -14,8 +14,7 @@ export const authOptions: NextAuthOptions = {
       if (user) {
         // List of allowed admin emails
         const adminEmails = [
-          "jordanjuniordjimelykheambo@gmail.com",
-          "coachcraft.space@gmail.com",
+          "bossmangadgets01@gmail.com",
         ];
 
         // Mark user as admin
