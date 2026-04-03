@@ -89,7 +89,7 @@ export function useProductForm(initialState: ProductFormState = defaultProductFo
     const uploadToCloudinary = async (file: File): Promise<CloudinaryUploadResult> => {
         const formData = new FormData();
         formData.append("file", file);
-        formData.append("upload_preset", "shopici_admin");
+        formData.append("upload_preset", "bossman");
         formData.append("cloud_name", "dhd14rzqf");
         const res = await fetch(`https://api.cloudinary.com/v1_1/dhd14rzqf/image/upload`, {
             method: "POST",
