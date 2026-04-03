@@ -3,6 +3,7 @@
 import { createContext, useContext, useState, useEffect } from "react";
 import useSWR from "swr";
 import type { StoreConfigType } from "@/types/StoreConfig";
+import { storeConfig as DEFAULT_CONFIG } from "../data/configData";
 
 const CACHE_KEY = "storeConfig";
 
@@ -68,7 +69,9 @@ export function ConfigProvider({ children }: { children: React.ReactNode }) {
 
   // Before mount: null (server + first client render — consistent, no hydration mismatch)
   // After mount: real config from SWR (backed by localStorage fallback on cold start)
-  const activeConfig = mounted ? (data ?? initialCache?.data ?? null) : null;
+  const activeConfig = mounted
+    ? data ?? initialCache?.data ?? DEFAULT_CONFIG
+    : null;
 
   // true only once mounted and real config is in hand
   const configReady = mounted && activeConfig !== null;
@@ -79,25 +82,25 @@ export function ConfigProvider({ children }: { children: React.ReactNode }) {
         {children}
         {/* Loading overlay — only shown on cold start (no cache, waiting for first fetch) */}
         {mounted && !activeConfig && (
-<div className="fixed inset-0 flex flex-col items-center justify-center bg-white z-[9999]">
-  <div className="w-48 h-px bg-shopici-black/10 relative overflow-hidden">
-    {/* The Scanner Beam */}
-    <div className="absolute inset-0 bg-shopici-black w-24 animate-[scan_1.5s_infinite_ease-in-out]" />
-  </div>
-  
-  {/* Minimalist Text */}
-  <span className="mt-4 text-[10px] font-black uppercase tracking-[0.5em] text-shopici-black">
-    Chargement
-  </span>
+          <div className="fixed inset-0 flex flex-col items-center justify-center bg-white z-[9999]">
+            <div className="w-48 h-px bg-shopici-black/10 relative overflow-hidden">
+              {/* The Scanner Beam */}
+              <div className="absolute inset-0 bg-shopici-black w-24 animate-[scan_1.5s_infinite_ease-in-out]" />
+            </div>
 
-  {/* CSS for the scan animation - Add to your global CSS or Tailwind config */}
-  <style jsx>{`
+            {/* Minimalist Text */}
+            <span className="mt-4 text-[10px] font-black uppercase tracking-[0.5em] text-shopici-black">
+              Chargement
+            </span>
+
+            {/* CSS for the scan animation - Add to your global CSS or Tailwind config */}
+            <style jsx>{`
     @keyframes scan {
       0% { transform: translateX(-100%); }
       100% { transform: translateX(200%); }
     }
   `}</style>
-</div>
+          </div>
         )}
       </ConfigContext.Provider>
     </ConfigReadyContext.Provider>
