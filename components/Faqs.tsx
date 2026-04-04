@@ -20,19 +20,19 @@ const faqs: FAQItem[] = [
     {
         id: "2",
         question: "Quels sont les modes de paiement acceptés ?",
-        answer: "Nous acceptons les paiements par Mobile Money (MTN, Orange), et paiement à la livraison dans certaines zones de Yaoundé.",
+        answer: "Nous acceptons les paiements par Mobile Money (MTN, Orange), et paiement à la livraison dans certaines zones de Douala.",
         category: "Paiement"
     },
     {
         id: "3",
         question: "Quel est le délai de livraison ?",
-        answer: "Les livraisons se font généralement sous 24-48h pour Yaoundé et 3-5 jours ouvrables pour les autres villes du Cameroun.",
+        answer: "Les livraisons se font généralement sous 24-48h pour Douala et 3-5 jours ouvrables pour les autres villes du Cameroun.",
         category: "Livraison"
     },
     {
         id: "4",
         question: "Les frais de livraison sont-ils inclus ?",
-        answer: "Les frais de livraison varient selon votre zone. La livraison est gratuite dans certaines zones de Yaoundé. Pour les autres zones, les frais vous seront communiqués lors de la confirmation de votre commande.",
+        answer: "Les frais de livraison varient selon votre zone. La livraison est gratuite dans certaines zones de Douala. Pour les autres zones, les frais vous seront communiqués lors de la confirmation de votre commande.",
         category: "Livraison",
     },
 

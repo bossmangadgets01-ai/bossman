@@ -19,22 +19,22 @@ const bannerSlides = [
   },
 ];
 export const storeConfig = {
-  name: "Shopici",
+  name: "loading...",
   logo: "/logo2.png",
-  description: "Votre boutique en ligne pour tous vos besoins",
-  objective: "Vous offrir une expérience d’achat simple, sécurisée et agréable, sans stress.",
+  description: "loading...",
+  objective: "loading...",
   contact: {
-    email: "contact@shopici.com",
-    phone: "+237 6 22 57 13 96",
-    address: "Yaoundé, Cameroun"
+    email: "loading...",
+    phone: "loading..",
+    address: "Douala, Cameroun"
   },
   currency: "XAF",
   social: {
-    facebook: "https://web.facebook.com/profile.php?id=61582791245183",
+    facebook: "",
   },
   tracking: {
-    facebookPixelId: "735596049606757",
-    googleAnalyticsId: "G-EH6KJZMW7W",
+    facebookPixelId: "",
+    googleAnalyticsId: "",
   },
   bannerSlides,
   theme: {
@@ -45,7 +45,7 @@ export const storeConfig = {
     }
   },
     features: {
-    mobileMoneyPayment: true,
+    mobileMoneyPayment: false,
   },
 };
 
